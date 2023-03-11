@@ -1,0 +1,41 @@
+body {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    font-family: monospace;
+}
+
+.title {
+    margin: auto;
+    text-align: center;
+}
+
+#input {
+    background-color: #5b6078	;
+    padding: 0.1em;
+    border: none;
+    color: #a6adc8;
+    
+}
+
+#check, #next {
+    background-color: 	#939ab7;
+    padding: 0.2em;
+    color: #cdd6f4;
+    border:none;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    text-align: center;
+
+}
+
+
+.a {
+    text-align: center;
+}
+
+#character {
+    font-size: 60px;
+}
