@@ -89,6 +89,7 @@ checkButton.addEventListener("click", function () {
       infoText.innerHTML =
         "That's not it. Correct answer is: " + Characters[currentCharacter].romanji;
       answerInput.style.backgroundColor = "#ee99a0";
+      answerInput.style.color = "#1e1e2e";
       funnyFlag = true;
       checkButton.innerText = "Next";
       streak = 0;
