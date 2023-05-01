@@ -4,11 +4,6 @@ body {
   font-family: monospace;
 }
 
-.title {
-  margin: auto;
-  text-align: center;
-}
-
 #input {
   background-color: #5b6078;
   padding: 0.1em;
@@ -22,26 +17,18 @@ body {
   padding: 0.2em;
   color: #cdd6f4;
   border: none;
-}
-
-.container {
-  position: relative;
-  margin: auto;
-  text-align: center;
-}
-
-.a {
-  text-align: center;
+  border-radius: 15%;
 }
 
 #character {
   font-size: 60px;
 }
 .bigContainer {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }

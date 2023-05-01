@@ -144,6 +144,7 @@ checkButton.addEventListener("click", function () {
       answerInput.style.backgroundColor = "#ee99a0";
       funnyFlag = true;
       checkButton.innerText = "Next";
+      streak = 0;
     }
   }
 });
