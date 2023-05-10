@@ -5,10 +5,10 @@ body {
 }
 
 #input {
-  background-color: #5b6078;
+  background-color: #cdd6f4;
   padding: 0.1em;
   border: none;
-  color: #a6adc8;
+  color: #1e1e2e;
   height: 4vh;
   margin-right: 0px;
   font-weight: bold;
@@ -17,7 +17,7 @@ body {
 
 #check,
 #next {
-  background-color: #939ab7;
+  background-color: #cdd6f4;
   padding: 0.2em;
   color: #1e1e2e;
   border: none;

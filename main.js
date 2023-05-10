@@ -46,11 +46,11 @@ const Characters = [
   {char: "を",romanji: 'wo', group: 9},
 ];
 
-const characterLabel = document.getElementById("character");
-const checkButton = document.getElementById("check");
-const answerInput = document.getElementById("input");
-const infoText = document.getElementById("infoText");
-const streakLabel = document.getElementById("streak");
+const characterLabel = document.querySelector("#character");
+const checkButton = document.querySelector("#check");
+const answerInput = document.querySelector("#input");
+const infoText = document.querySelector("#infoText");
+const streakLabel = document.querySelector("#streak");
 let streak = 0;
 let isCheckButtonClicked = false;
 
@@ -58,14 +58,10 @@ function randomize() {
   streakLabel.innerText = "Streak: " + streak;
   infoText.innerText = "";
   answerInput.value = "";
-  answerInput.style.backgroundColor = "#5b6078";
+  answerInput.style.backgroundColor = "#cdd6f4";
   currentCharacter = Math.floor(Math.random() * Characters.length);
   characterLabel.textContent = Characters[currentCharacter].char;
-  for (let i = 0; i < Characters.length; i++) {
-    console.log(Characters[i].char,Characters[i].romanji);
-  }
 }
-
 randomize();
 document.addEventListener("keydown", function (event) {
   if (event.key == "Enter") {
@@ -74,24 +70,27 @@ document.addEventListener("keydown", function (event) {
 });
 checkButton.addEventListener("click", function () {
   if (isCheckButtonClicked == true) {
+
     isCheckButtonClicked = false;
     checkButton.innerText = "Check";
     randomize();
   } else {
-    if (answerInput.value == Characters[currentCharacter].romanji) {
+    if (answerInput.value.toLowerCase() == Characters[currentCharacter].romanji) {
       console.log("Good");
+      streak++;
       answerInput.style.backgroundColor = "#a6da95";
       isCheckButtonClicked = true;
       checkButton.innerText = "Next";
-      streak++;
+
       infoText.innerText = "";
     } else {
+      streak = 0;
       infoText.innerText =
         "That's not it. Correct answer is: " + Characters[currentCharacter].romanji;
       answerInput.style.backgroundColor = "#ee99a0";
-      answerInput.style.color = "#1e1e2e";
       checkButton.innerText = "Check";
-      streak = 0;
+      answerInput.value = ""
+
     }
   }
 });
