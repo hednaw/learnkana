@@ -11,6 +11,8 @@ body {
   color: #a6adc8;
   height: 4vh;
   margin-right: 0px;
+  font-weight: bold;
+  font-size: 24;
 }
 
 #check,
