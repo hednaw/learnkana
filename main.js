@@ -52,7 +52,7 @@ const answerInput = document.getElementById("input");
 const infoText = document.getElementById("infoText");
 const streakLabel = document.getElementById("streak");
 let streak = 0;
-let funnyFlag = false;
+let isCheckButtonClicked = false;
 
 function randomize() {
   streakLabel.innerText = "Streak: " + streak;
@@ -73,15 +73,15 @@ document.addEventListener("keydown", function (event) {
   }
 });
 checkButton.addEventListener("click", function () {
-  if (funnyFlag == true) {
-    funnyFlag = false;
+  if (isCheckButtonClicked == true) {
+    isCheckButtonClicked = false;
     checkButton.innerText = "Check";
     randomize();
   } else {
     if (answerInput.value == Characters[currentCharacter].romanji) {
       console.log("Good");
       answerInput.style.backgroundColor = "#a6da95";
-      funnyFlag = true;
+      isCheckButtonClicked = true;
       checkButton.innerText = "Next";
       streak++;
       infoText.innerText = "";
@@ -90,6 +90,7 @@ checkButton.addEventListener("click", function () {
         "That's not it. Correct answer is: " + Characters[currentCharacter].romanji;
       answerInput.style.backgroundColor = "#ee99a0";
       answerInput.style.color = "#1e1e2e";
+      checkButton.innerText = "Check";
       streak = 0;
     }
   }
