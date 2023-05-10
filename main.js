@@ -72,7 +72,6 @@ document.addEventListener("keydown", function (event) {
     checkButton.click();
   }
 });
-
 checkButton.addEventListener("click", function () {
   if (funnyFlag == true) {
     funnyFlag = false;
@@ -85,13 +84,12 @@ checkButton.addEventListener("click", function () {
       funnyFlag = true;
       checkButton.innerText = "Next";
       streak++;
+      infoText.innerText = "";
     } else {
-      infoText.innerHTML =
+      infoText.innerText =
         "That's not it. Correct answer is: " + Characters[currentCharacter].romanji;
       answerInput.style.backgroundColor = "#ee99a0";
       answerInput.style.color = "#1e1e2e";
-      funnyFlag = true;
-      checkButton.innerText = "Next";
       streak = 0;
     }
   }
